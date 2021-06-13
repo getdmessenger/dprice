@@ -30,7 +30,7 @@ export default class PriceTree {
         json: true,
         gzip: true
       }).then(x => x.json()).then(res => resolve(res)).catch(() => {
-        error: "Unable to connect to CMC API."
+        console.log("error: Unable to connect to CMC API.")
       })
     )]
   }
