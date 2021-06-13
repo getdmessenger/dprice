@@ -29,7 +29,9 @@ export default class PriceTree {
         headers: { 'X-CMC_PRO_API_KEY': cmcKey },
         json: true,
         gzip: true
-      }).then(x => x.json()).then(res => resolve(res)).catch(() => {
+      }).then(x =>
+         x.json()).then(res => 
+        resolve(res)).catch(() => {
         console.log("error: Unable to connect to CMC API.")
       })
     )]
