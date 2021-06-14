@@ -18,5 +18,5 @@ async function start() {
   console.log('The dTree key is: ', base.key.toString('hex'))
 
   const priceTree = new PriceTree(db)
-  await priceTree.dispatchPrice()
+  await priceTree.dispatchPrices()
 }
