@@ -68,8 +68,6 @@ class PriceTree {
     //const { db } = this
     if (!prices || prices.error) return
     prices.data.forEach(async (x) => {
-
-      console.log("sssss",x.name);
       const { name } = x.name
       const batch = db.batch()
       await batch.del(`!prices!${name}`)
