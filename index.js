@@ -1,5 +1,6 @@
 const { Client } = require('dhub')
-const { PriceTree } = require('./classes/PriceTree')
+const  {PriceTree}  = require('./classes/PriceTree')
+
 const DTree = require('dwebtree')
 
 start()

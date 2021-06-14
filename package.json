@@ -1,0 +1,23 @@
+{
+  "name": "dprice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getdmessenger/dprice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/getdmessenger/dprice/issues"
+  },
+  "homepage": "https://github.com/getdmessenger/dprice#readme",
+  "dependencies": {
+    "dhub": "^1.0.6",
+    "dwebtree": "^1.0.1"
+  }
+}

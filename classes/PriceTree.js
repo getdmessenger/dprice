@@ -2,7 +2,7 @@ const cmcKey = 'f28a642b-acaf-42dc-8a7c-229a6cd1828f'
 const intervalTime = 60000 * 30
 let priceInterval
 
-export default class PriceTree {
+class PriceTree {
   constructor (db) {
     this.db = db
   }
@@ -37,11 +37,12 @@ export default class PriceTree {
     )]
   }
 
-  static async setPrices () {
+
+  static async setPrices() {
+      const prices = await PriceTree.getPrices()
     const { db } = this
-    const prices = await PriceTree.getPrices()
     if (!prices || prices.error) return
-    prices.forEach(x => {
+    prices.forEach(async (x) => {
       const { name } = x
       const batch = db.batch()
       await batch.del(`!prices!${name}`)
@@ -50,3 +51,5 @@ export default class PriceTree {
     })
   }
 }
+
+module.exports = PriceTree
