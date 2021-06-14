@@ -3,7 +3,7 @@ const intervalTime = 60000 * 30
 let priceInterval
 
 class PriceTree {
-  constructor (db) {
+  constructor(db) {
     this.db = db
   }
 
