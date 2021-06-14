@@ -18,6 +18,7 @@
   "homepage": "https://github.com/getdmessenger/dprice#readme",
   "dependencies": {
     "dhub": "^1.0.6",
-    "dwebtree": "^1.0.1"
+    "dwebtree": "^1.0.1",
+    "node-fetch": "^2.6.1"
   }
 }
