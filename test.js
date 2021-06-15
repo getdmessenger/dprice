@@ -14,8 +14,10 @@ async function start() {
 
   await replicate(base)
   
-  let bitcoinData = await db.get('!prices!bitcoin')
+  let bitcoinData = await db.get('!prices!Bitcoin')
 
+  var data = bitcoinData.value
+  console.log("ssss",bitcoinData ," ",JSON.parse(bitcoinData.value));
   console.log('Bitcoin price is: ', bitcoinData.value.quote.USD)
   console.log('Bitcoin data is: ', bitcoinData)
 }

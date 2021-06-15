@@ -68,10 +68,11 @@ class PriceTree {
     //const { db } = this
     if (!prices || prices.error) return
     prices.data.forEach(async (x) => {
+      console.log("bitcoinnn",x ," ",x.quote.USD.price);
       var name  = x.name
       const batch = db.batch()
-      await batch.del(`!prices!${name}`)
-      await batch.put(`!prices!${name}`, x)
+      await batch.del(`!prices!${name}`,x.quote.USD.price)
+      await batch.put(`!prices!${name}`, x.quote.USD.price)
       await batch.flush()
     })
   }
